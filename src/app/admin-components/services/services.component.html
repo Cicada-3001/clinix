@@ -1,0 +1,41 @@
+<div class="row padding">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Services</h3>
+
+          <div class="card-tools">
+            <div class="input-group input-group-sm" style="width: 150px;">
+              <input type="text" name="table_search" class="form-control float-right" placeholder="Search"  [formControl]="filter">
+
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-default">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button (click)="openForm()">Sample Button</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap">
+            <thead>
+              <tr>
+                <th *ngFor="let column of columns ">{{column}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let service of services$ | async; index as i" > 
+                <td><ngb-highlight [result]="service.serviceName" [term]="filter.value!"></ngb-highlight></td>
+                <td><ngb-highlight [result]="service.serviceType" [term]="filter.value!"></ngb-highlight></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+       
+      </div>
+     
+    </div>
+</div>  
+<app-add-service [show]="formIsOpen"></app-add-service>

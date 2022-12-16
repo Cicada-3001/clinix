@@ -1,0 +1,33 @@
+<div class="form-holder"> 
+<div class="row" cdkDrag>
+      <!-- left column -->
+      <div class="col-md-6">
+        <!-- general form elements -->
+        <div class="card">
+          <div class="card-header dark">
+            <h3 class="card-title">Add Service</h3>
+          </div>
+          <!-- /.card-header -->
+          <!-- form start -->
+          <form [formGroup]="addServiceForm">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Service Name</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Service Name"  formControlName="serviceName">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="serviceType">
+              </div>
+              
+             
+            </div>
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+              <button (click)="saveService()" [disabled]="addServiceForm.invalid" class="btn btn-primary">Submit</button>
+              <button (click)="closeForm()"  class="btn btn-primary">Close</button>
+            </div>
+          </form>
+        </div>
+        <!-- /.card -->

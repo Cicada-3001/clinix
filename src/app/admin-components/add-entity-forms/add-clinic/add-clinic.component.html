@@ -1,0 +1,38 @@
+<div class="form-holder">  
+<div class="row" *ngIf="show">
+      <!-- left column -->
+      <div class="col-md-6" cdkDrag>
+        <!-- general form elements -->
+        <div class="card "  >
+          <div class="card-header dark" >
+            <h3 class="card-title">Add Clinic</h3>
+          </div>
+          <!-- /.card-header -->
+          <!-- form start -->
+          <form [formGroup]="addClinicForm">
+
+            <div class="card-body">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="email" class="form-control"  placeholder="Name" formControlName="name">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Location</label>
+                <input type="password" class="form-control"  placeholder="Location" formControlName="location">
+              </div>
+              <div>
+                <label for="exampleInputPassword1">Coordinates</label>
+                <input type="password" class="form-control"  placeholder="Coordinates" formControlName="coordinates">
+              </div>
+  
+            </div>
+            <!-- /.card-body. -->
+
+            <div class="card-footer">
+              <button (click)="saveClinic()" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+    </div>
+</div>
+        
