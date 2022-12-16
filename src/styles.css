@@ -13,13 +13,17 @@
     padding-bottom: 0px !important;
 }   
 
+button{
+    border: none;
+    margin-left: 10px;
+}
 
 .form-holder{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;
+    width: calc( 100% - 200px);
 }
 
 .card-tools{
@@ -34,6 +38,7 @@ a{
 *{
     font-size: 14px;
 }
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
