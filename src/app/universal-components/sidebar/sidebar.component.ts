@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { userData } from 'src/app/Shared/shared';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
+  user= userData
+
 
 }

@@ -33,18 +33,16 @@
               </div>
               <!-- /.d-flex -->
 
-              <div class="position-relative mb-4">
-                <canvas id="visitors-chart" height="200"></canvas>
-              </div>
+              <div>
+                <canvas baseChart
+                  [type]="'line'"
+                  [data]="lineChartData"
+                  [options]="lineChartOptions"
+                  [legend]="lineChartLegend"
+                 height="200"
+                 >
+                </canvas>
 
-              <div class="d-flex flex-row justify-content-end">
-                <span class="mr-2">
-                  <i class="fas fa-square text-primary"></i> This Week
-                </span>
-
-                <span>
-                  <i class="fas fa-square text-gray"></i> Last Week
-                </span>
               </div>
             </div>
           </div>
@@ -92,64 +90,7 @@
                     </a>
                   </td>
                 </tr>
-                <tr>
-                  <td>
-                    <img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">
-                    Another Product
-                  </td>
-                  <td>$29 USD</td>
-                  <td>
-                    <small class="text-warning mr-1">
-                      <i class="fas fa-arrow-down"></i>
-                      0.5%
-                    </small>
-                    123,234 Sold
-                  </td>
-                  <td>
-                    <a href="#" class="text-muted">
-                      <i class="fas fa-search"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">
-                    Amazing Product
-                  </td>
-                  <td>$1,230 USD</td>
-                  <td>
-                    <small class="text-danger mr-1">
-                      <i class="fas fa-arrow-down"></i>
-                      3%
-                    </small>
-                    198 Sold
-                  </td>
-                  <td>
-                    <a href="#" class="text-muted">
-                      <i class="fas fa-search"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">
-                    Perfect Item
-                    <span class="badge bg-danger">NEW</span>
-                  </td>
-                  <td>$199 USD</td>
-                  <td>
-                    <small class="text-success mr-1">
-                      <i class="fas fa-arrow-up"></i>
-                      63%
-                    </small>
-                    87 Sold
-                  </td>
-                  <td>
-                    <a href="#" class="text-muted">
-                      <i class="fas fa-search"></i>
-                    </a>
-                  </td>
-                </tr>
+               
                 </tbody>
               </table>
             </div>
@@ -167,10 +108,6 @@
             </div>
             <div class="card-body">
               <div class="d-flex">
-                <p class="d-flex flex-column">
-                  <span class="text-bold text-lg">$18,230.00</span>
-                  <span>Sales Over Time</span>
-                </p>
                 <p class="ml-auto d-flex flex-column text-right">
                   <span class="text-success">
                     <i class="fas fa-arrow-up"></i> 33.1%
@@ -179,19 +116,15 @@
                 </p>
               </div>
               <!-- /.d-flex -->
-
               <div class="position-relative mb-4">
-                <canvas id="sales-chart" height="200"></canvas>
-              </div>
-
-              <div class="d-flex flex-row justify-content-end">
-                <span class="mr-2">
-                  <i class="fas fa-square text-primary"></i> This year
-                </span>
-
-                <span>
-                  <i class="fas fa-square text-gray"></i> Last year
-                </span>
+                <canvas  height="200"
+                baseChart
+                [data]="barChartData"
+                [options]="barChartOptions"
+                [plugins]="barChartPlugins"
+                [legend]="barChartLegend"
+                [type]="'bar'"
+                ></canvas>
               </div>
             </div>
           </div>

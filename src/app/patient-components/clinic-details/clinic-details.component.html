@@ -1,0 +1,97 @@
+<!-- Default box -->
+<div class="clinic-det" *ngIf="!showDetails">
+  <div class="back-button">
+    <h5 class="m-0"><i class="fas fa-backward" (click)="goBack()"></i></h5>
+  </div>
+  <div class="card card-solid">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="col-12 main-image">
+                <img class="main-image" [src]=clinic.imgUrl class="product-image" alt="Product Image">
+              </div>
+              <div class="col-12 product-image-thumbs">
+                <div class="product-image-thumb active"><img src="./../../assets/images/clinicX1.jpg" alt="Product Image"></div>
+                <div class="product-image-thumb" ><img src="./../../assets/images/clinicX2.jpg" alt="Product Image"></div>
+                <div class="product-image-thumb" ><img src="./../../assets/images/clinicX3.jpg" alt="Product Image"></div>
+                <div class="product-image-thumb" ><img src="./../../assets/images/clinicX4.jpg" alt="Product Image"></div>
+                <div class="product-image-thumb" ><img src="./../../assets/images/clinicX5.jpg" alt="Product Image"></div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <h3 class="my-3"><strong> {{clinic.name}}</strong> <br><i class="fas fa-location-pin"></i> 
+                <span id="clinic-loc"><i class="fas fa-map-marker-alt mr-1"></i> {{clinic.branch}}</span> </h3>
+            <p style="color: gray;">{{clinic.about.slice(0,350)}}...</p>
+              <hr>
+              <h4><strong style="opacity: 0.8;" >Medical Practitioners</strong></h4>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-default text-center" *ngFor=" let doctor of doctors; let i=index" (click)="displayDetails(i)">
+                  <input type="radio" name="color_option" id="color_option_a1" autocomplete="off" checked>
+                  <small>{{doctor.lastname}}</small>
+                </label>
+               
+              </div>
+
+              <h4 class="mt-3"><strong style="opacity: 0.8;">Address</strong></h4>
+              <div class="btn-group btn-group-toggle address" data-toggle="buttons">
+                <label class="btn text-center">
+                  <input type="radio" name="color_option" id="color_option_a1" autocomplete="off" checked>
+                  <small><i class="fas fa-map-marker-alt mr-1" style="color: gray;"></i><a [href]="clinic.mapLink" target="_blank">{{clinic.address}}</a></small>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <nav class="w-100">
+              <div class="nav nav-tabs" id="product-tab" role="tablist">
+                <a [class]="control==1?active:inactive" id="product-desc-tab" data-toggle="tab"  role="tab" aria-controls="product-desc" aria-selected="true" (click)="switchControl(1)">About</a>
+                <a [class]="control==2?active:inactive" id="product-comments-tab" data-toggle="tab"  role="tab" aria-controls="product-comments" aria-selected="false" (click)="switchControl(2)">Services</a>
+                <a [class]="control==3?active:inactive" id="product-rating-tab" data-toggle="tab"  role="tab" aria-controls="product-rating" aria-selected="false" (click)="switchControl(3)">Equipment</a>
+              </div>
+            </nav>
+            <div class="tab-content p-3" id="nav-tabContent" [ngSwitch]="control">
+              <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab" *ngSwitchDefault>
+                 {{clinic.about}}
+              </div>
+
+              <div class="tab-pane fade show active " id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab" *ngSwitchCase="2">
+                <div  class="row">
+                  <div class="col-sm-2">
+                    <strong>Inpatient</strong><br>
+                    service 
+                  </div>
+                  <div class="col-sm-2">
+                    <strong>Outpatient</strong><br>
+                    service 2
+                  </div>
+
+                </div>
+             </div>
+
+             <div class="tab-pane fade show active  " id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab" *ngSwitchCase="3">
+                Equipment 
+             </div>
+
+
+
+              
+              
+              
+              
+             
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+</div>
+<app-doctor-details *ngIf="showDetails" [doctor]="doctors[index]" [clinic]="clinic" (event)=" goBackwards($event)" ></app-doctor-details>

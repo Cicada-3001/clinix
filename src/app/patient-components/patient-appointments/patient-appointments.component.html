@@ -1,0 +1,45 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Timelime example  -->
+        <div class="row">
+          <div class="col-md-12">
+            <!-- The time line -->
+            <div class="timeline">
+              <!-- timeline time label -->
+              <div class="time-label">
+                <span >Jan 2023</span>
+              </div>
+              <!-- /.timeline-label -->
+              <!-- timeline item -->
+              <div *ngFor="let appointment of appointments.slice().reverse(); let i=index">
+                <i class="fas fa-clock bg-gray"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a>Clinic {{appointment.clinicName}}</a></h3>
+
+                  <div class="timeline-body">
+                    <strong>Doctor: </strong>   {{ appointment.doctorName}} <br>
+                    <strong>Appointment Number: </strong> {{appointment.number }}  <br> <strong>Appointment Date: </strong> {{ appointment.date }}
+                  </div>
+                  <div class="timeline-footer">
+                    <a class="btn btn-danger btn-sm" (click)="deleteAppointment(appointment.id)">Delete</a>
+                  </div>
+                </div>
+              </div>
+              <!-- END timeline item -->
+              <div>
+                <i class="fas fa-clock bg-gray"></i>
+              </div>
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+      </div>
+      <!-- /.timeline -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper --> 

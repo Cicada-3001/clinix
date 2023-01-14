@@ -1,0 +1,71 @@
+img{ 
+    height: 30px;
+    width: 30px;
+}
+
+.wrapper{ 
+  
+    position: relative;
+    width: 100vw;
+}
+
+.content-wrapper{
+    position: absolute;
+    top: 53px;
+    width: 100%;
+    left: -;
+    right: 0;
+}
+
+.username{
+    font-size: 11px;
+}
+
+
+
+i{
+    cursor: pointer;
+}
+
+.fa-backward{
+    opacity: 0.5;
+}
+
+
+.card{ 
+    position: relative;
+}
+
+.link-container{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+button{
+    margin-left: 0;
+}
+
+.card img{
+    height: 100px;
+    width: 150px;
+    border-radius: 5px;
+    margin: 2px;
+    float: left;
+    margin-right: 10px;
+}
+
+.navbar{ 
+    width: 100%;
+    position: absolute;
+    left: -;
+    right:0;
+}
+
+.home-nav{ 
+    color: grey;
+    font-size: 12px;
+}
+
+

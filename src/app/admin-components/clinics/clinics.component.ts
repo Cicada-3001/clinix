@@ -1,6 +1,6 @@
 import { DecimalPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, PipeTransform } from '@angular/core';
+import { Component, Input, PipeTransform } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { map, Observable, startWith } from 'rxjs';
@@ -56,8 +56,9 @@ export class ClinicsComponent {
  )     
 }
 
-  openForm(){
-    this.formIsOpen = true;
-  }
+openForm(){
+  this.formIsOpen = true;
+}
 
 }
+

@@ -1,0 +1,26 @@
+.clinic-det{
+    padding-right: 50px; 
+    padding-left: 50px;
+}
+
+
+.card-header{
+    background-color: gray;
+    color: white;
+}
+
+h4 strong{
+    opacity: 0.8;
+}
+a{
+    color: gray;
+}
+
+.contact{
+    text-transform: lowercase;
+}
+.list-group-item{
+    padding-right: 5px;
+    padding-left: 5px;
+
+}

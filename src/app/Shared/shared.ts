@@ -66,14 +66,18 @@ export interface Medicine{
 
 export interface Appointment{
    id:number;
-   appointmentName: string; 
-   apppointmentDate: string; 
-   appointmentTime: string;
+   date: string; 
+   number: number;
+   doctorName:string
+   patientName:string
+   clinicName: string
+   patientId : number; 
    doctorId: number; 
-   clinicId: number; 
-   patientId: number;
-
+   clinicI: number; 
 }
+
+
+
 
 export const ClinicUrl="http://localhost:8060/clinics"
 export const DoctorUrl="http://localhost:8060/doctors"
@@ -87,3 +91,8 @@ export const UserUrl="http://localhost:8060/users"
 export function openForm(arg: boolean){
     arg=true;
 }
+
+
+export const userData=JSON.parse(sessionStorage.getItem('user')!!)
+
+

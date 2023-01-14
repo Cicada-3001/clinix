@@ -1,0 +1,86 @@
+
+<div class="clinic-det">
+<div class="container-fluid">
+        <div class="row">
+            <div class="back-button" >
+                <h5 class="m-0"><i class="fas fa-backward" (click)="goBack()"></i></h5>
+            </div>
+          <div class="col-md-4">
+            <!-- Profile Image -->
+            <div class="card card-primary">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <img class="profile-user-img img-fluid img-circle"
+                       [src]=doctor.imgUrl
+                       alt="User profile picture">
+                </div>
+
+                <h3 class="profile-username text-center">{{doctor.firstname}}  {{doctor.lastname}}</h3>
+
+                <p class="text-muted text-center">{{doctor.speciality}}</p>
+
+                <ul class="list-group list-group-unbordered mb-3">
+                  <li class="list-group-item">
+                    <b>Experience</b> <a class="float-right">{{doctor.experince}} years</a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>Address</b> <a class="float-right">{{clinic.address}}</a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>Contact</b> <a class="float-right contact">{{doctor.lastname}}@clinicx.org.com</a>
+                  </li>
+                </ul>
+
+                <a  class="btn btn-success btn-block" style="color: white" (click)="saveAppointment()"><b>Book Appointment</b></a>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            </div>
+
+            <div class="col-md-8"> 
+            <!-- About Me Box -->
+            <div class="card ">
+              <div class="card-header">
+                <h3 class="card-title">About Me</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <strong><i class="fas fa-book mr-1"></i> Education</strong>
+
+                <p class="text-muted">
+                  B.S. in Medicine from the University of Tennessee 
+                </p>
+
+                <hr>
+
+                <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+
+                <p class="text-muted">{{clinic.branch}}</p>
+
+                <hr>
+
+                <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
+
+                <p class="text-muted">
+                  <span class="tag tag-danger"></span>
+                </p>
+
+                <hr>
+
+                <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
+
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+         </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+ 
+  <!-- /.content-wrapper -->
+
+

@@ -1,0 +1,15 @@
+
+
+.main-image img{
+    height: 250px !important; 
+}
+
+
+.product-image-thumb{ 
+    border:none !important;
+    padding: 0 !important;
+}
+
+.tab-content{ 
+    color: rgb(98, 56, 56);
+}

@@ -13,7 +13,12 @@ import { ForgotPasswordComponent } from './auth-components/forgot-password/forgo
 import { LoginComponent } from './auth-components/login/login.component';
 import { RegisterComponent } from './auth-components/register/register.component';
 import { ResetPasswordComponent } from './auth-components/reset-password/reset-password.component';
+import { ClinicDetailsComponent } from './patient-components/clinic-details/clinic-details.component';
+import { DoctorDetailsComponent } from './patient-components/doctor-details/doctor-details.component';
+import { PatientAppointmentsComponent } from './patient-components/patient-appointments/patient-appointments.component';
 import { PatientHomeComponent } from './patient-components/patient-home/patient-home.component';
+import { PatientComponent } from './patient-components/patient/patient.component';
+import { TestComponent } from './universal-components/test/test.component';
 
 
 
@@ -31,18 +36,19 @@ const routes: Routes = [
         { path: "equipment", component: EquipmentComponent},
     ]},
 
-    {path: "patient", component: PatientHomeComponent,
+    {path: "patient", component: PatientComponent,
     children: [
-      { path: "patients", component: PatientsComponent },
-      { path: "clinics", component: ClinicsComponent },
-      { path: "appointments", component: AppointmentsComponent },
-      { path: "medicines", component: MedicinesComponent },
+      { path: "home", component: PatientHomeComponent },
+      { path: "clinic", component: ClinicDetailsComponent },
+      { path: "appointments", component: PatientAppointmentsComponent },
+      { path: "doctor", component: DoctorDetailsComponent },
       { path: "services", component: ServicesComponent},
       { path: "doctors", component: DoctorsComponent},
-      
+      { path: "**", redirectTo: "/patient/home" },
     ]},
 
     { path: "sign-in", component: LoginComponent },
+    { path: "test", component:TestComponent },
     { path: "sign-up", component: RegisterComponent},
     { path: "forgot-password", component: ForgotPasswordComponent },
     { path: "recover-password", component: ResetPasswordComponent},

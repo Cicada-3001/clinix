@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ChartsModule, WavesModule } from 'angular-bootstrap-md'
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +32,13 @@ import { SplashScreenComponent } from './universal-components/splash-screen/spla
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DecimalPipe } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PatientAppointmentsComponent } from './patient-components/patient-appointments/patient-appointments.component';
+import { AccountComponent } from './universal-components/account/account.component';
+import { PatientComponent } from './patient-components/patient/patient.component';
+import { ClinicDetailsComponent } from './patient-components/clinic-details/clinic-details.component';
+import { DoctorDetailsComponent } from './patient-components/doctor-details/doctor-details.component';
+import { RoughWorkComponent } from './universal-components/rough-work/rough-work.component';
+import { NgChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +64,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DashboardComponent,
     SidebarComponent,
     EquipmentComponent,
-    SplashScreenComponent
+    SplashScreenComponent,
+    PatientAppointmentsComponent,
+    AccountComponent,
+    PatientComponent,
+    ClinicDetailsComponent,
+    DoctorDetailsComponent,
+    RoughWorkComponent
   ],
   imports: [
     BrowserModule,
@@ -65,9 +79,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     NgbModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+    NgChartsModule,
+    ChartsModule,
   ],
   providers: [DecimalPipe],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

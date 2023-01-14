@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PatientUrl } from 'src/app/Shared/shared';
-//import { DoctorUrl } from 'src/app/Shared/shared';
+//import { DoctorUrl } from 'src/app/Shared/shared'
+
 
 declare let Swal: any
 
@@ -21,23 +22,23 @@ export class AddPatientComponent {
     lastname: new FormControl('', [Validators.required]),
     address: new FormControl('', [Validators.required]),
     dob: new FormControl('', [Validators.required]),
-    blood: new FormControl('', [Validators.required])
+    blood: new FormControl('', [Validators.required]),
+    sex: new FormControl('', [Validators.required]), 
+    test: new FormControl('', [Validators.required]), 
   })
 
   constructor(private http:HttpClient) { }
 
   
   savePatient() {
-    let data = this.addPatientForm.value;
+    let data = this.addPatientForm.value
+    console.log(data)
     
     this.http.post(PatientUrl,data)
     .subscribe(Result => {
       if (1) {
-        Swal.fire(
-       'Success!',
-        Result,
-       'success'
-     )
+        console.log(Result);
+        
      } else if (!1) {
        Swal.fire({
          icon: 'error',

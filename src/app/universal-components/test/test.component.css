@@ -1,0 +1,35 @@
+.content-wrapper{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    left: -;
+    right: 0;
+}
+
+.navbar{ 
+    width: 100%;
+    position: absolute;
+    left: -;
+    right:0;
+}
+
+button{
+    margin-left: 0;
+}
+
+.content{
+    padding-left: 80px;
+    margin-top: -15px !important ;
+}   
+
+.timeline-item{
+    width: 80%;
+}
+
+.navbar{
+    height: 50px;
+}
+img{
+    height: 30px;
+    width: 30px;
+}

@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms'
 import { ApiService } from 'src/app/API service/API';
+import { userData } from 'src/app/Shared/shared';
 
 declare let Swal: any
 
@@ -25,23 +26,31 @@ export class LoginComponent {
 
   apiService= new ApiService(this.http)
   
-  emailAddress=this.loginForm.get('emailAddress')
-  password=this.loginForm.get('password')
+  userEmail=this.loginForm.get('emailAddress')
+  userPassword=this.loginForm.get('password')
      
   loginUser() {
     try {
-      this.apiService.emailLogin(this.emailAddress?.value,this.password?.value).subscribe((Result: any) => {
+      this.apiService.emailLogin(this.userEmail?.value,this.userPassword?.value).subscribe((Result: any) => {
+      this.user=Result;
       console.log(Result)
-      
-      console.log(Result)
+      console.log("This is the new application")
       
       if (1) {
        // this.showSplash = true
         sessionStorage.setItem('user', JSON.stringify(this.user))
-        setTimeout(() => {
-          this.router.navigate(['/admin/dashboard']);
-        }, 3200)
-
+        console.log(userData)
+        if(this.user.userType == 1){
+           setTimeout(() => {
+          this.router.navigate(['/patient/home']);
+         
+        }, 2200)
+        }else if(this.user.userType == 2){
+          setTimeout(() => {
+            this.router.navigate(['/patient/home']);
+          }, 2200)
+        }
+       
         
       } else if (0) {
        // this.loginError=this.report

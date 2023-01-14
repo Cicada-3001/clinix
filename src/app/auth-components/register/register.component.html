@@ -11,7 +11,7 @@
     
           <form [formGroup]="signUpForm" method="post">
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Firstname" formControlName="firstname">
+              <input type="text" class="form-control" placeholder="Fullname" formControlName="userName">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-user"></span>
@@ -20,17 +20,7 @@
             </div>
 
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Lastname" formControlName="lastname" >
-              <div class="input-group-append">
-                <div class="input-group-text">
-                  <span class="fas fa-user"></span>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Phone" formControlName="phone">
+              <input type="tel" class="form-control" placeholder="Phone" formControlName="userPhone">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-phone"></span>
@@ -40,7 +30,7 @@
 
 
             <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Email" formControlName="email">
+              <input type="email" class="form-control" placeholder="Email" formControlName="userEmail">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-envelope"></span>
@@ -49,7 +39,7 @@
             </div>
 
             <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="User Type" formControlName="userType">
+              <input type="number" class="form-control" placeholder="User Type" formControlName="userType">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-envelope"></span>
@@ -57,9 +47,8 @@
               </div>
             </div>
 
-
             <div class="input-group mb-3">
-              <input type="password" class="form-control" placeholder="Password"  formControlName="password">
+              <input type="password" class="form-control" placeholder="Password"  formControlName="userPassword">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-lock"></span>
@@ -85,7 +74,7 @@
               </div>
               <!-- /.col -->
               <div class="col-4">
-                <button [disabled]="signUpForm.invalid" (click)="registerUser" class="btn btn-primary btn-block">Register</button>
+                <button [disabled]="signUpForm.invalid" (click)="registerUser()" class="btn btn-primary btn-block">Register</button>
               </div>
               <!-- /.col -->
             </div>
