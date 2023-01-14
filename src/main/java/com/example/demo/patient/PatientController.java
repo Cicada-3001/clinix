@@ -1,12 +1,12 @@
-package com.example.demo.patient;
+package main.java.com.example.demo.patient;
 
 
-import com.example.demo.user.User;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static com.example.demo.Shared.BASEURL;
+import static main.java.com.example.demo.Shared.BASEURL;
 @CrossOrigin(origins = BASEURL)
 @RestController
 @RequestMapping(path ="/patients")

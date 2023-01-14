@@ -1,7 +1,7 @@
-package com.example.demo.specility;
+package main.java.com.example.demo.specility;
 
 
-import com.example.demo.user.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ public class SpecialityService {
         this.specialityRepository = specialityRepository;
     }
 
-    List<Speciality> getSpecialities(){
+    public List<Speciality> getSpecialities(){
         return specialityRepository.findAll();
     }
 

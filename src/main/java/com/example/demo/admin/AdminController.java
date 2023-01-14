@@ -1,7 +1,7 @@
-package com.example.demo.admin;
+package main.java.com.example.demo.admin;
 
+/*
 
-import com.example.demo.user.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,4 +27,11 @@ public class AdminController {
         this.adminService.addNewAdmin(admin);
     }
 
-}
+
+    @GetMapping()
+    public String loginAdmin(){
+        return this.adminService.loginAdmin();
+    }
+
+} 
+*/

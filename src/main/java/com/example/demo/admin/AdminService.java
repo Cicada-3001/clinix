@@ -1,6 +1,6 @@
-package com.example.demo.admin;
+package main.java.com.example.demo.admin;
 
-import com.example.demo.patient.Patient;
+/*
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,4 +21,10 @@ public class AdminService {
         System.out.println(admin);
     }
 
+    public String loginAdmin(){
+        return adminRepository.findByEmail();
+
+    }
+
 }
+*/

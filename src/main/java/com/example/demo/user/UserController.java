@@ -1,13 +1,13 @@
-package com.example.demo.user;
+package main.java.com.example.demo.user;
 
-
-import com.example.demo.patient.Patient;
-import com.example.demo.patient.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static main.java.com.example.demo.Shared.BASEURL;
+@CrossOrigin(origins = BASEURL)
 @RestController
 @RequestMapping(path="/users")
 public class UserController {
@@ -18,11 +18,21 @@ public class UserController {
         this.userService = userService;
     }
 
+    
     @GetMapping()
     List<User> getUsers(){
         return userService.getUsers();
     }
 
+    
+    @RequestMapping("/login")
+    @GetMapping()
+    User getUsers(@RequestParam String  email,@RequestParam String password){
+        return userService.loginUser(email,password);
+    }
+
+    
+    
     @PostMapping()
     public void registerNewUser(@RequestBody User user){
         this.userService.addNewUser(user);

@@ -1,4 +1,4 @@
-package com.example.demo.Service;
+package main.java.com.example.demo.Service;
 
 import jakarta.persistence.*;
 
@@ -18,7 +18,6 @@ public class Service {
             generator = "service_sequence"
     )
     private long id;
-    private Integer serviceType;
     private String serviceName;
 
     public Service(){
@@ -26,11 +25,10 @@ public class Service {
     }
 
 
-    public Service(long id, Integer serviceType, String serviceName) {
-        this.id = id;
-        this.serviceType = serviceType;
+    public Service(String serviceName) {
         this.serviceName = serviceName;
     }
+    
 
     public long getId() {
         return id;
@@ -40,13 +38,6 @@ public class Service {
         this.id = id;
     }
 
-    public Integer getServiceType() {
-        return serviceType;
-    }
-
-    public void setServiceType(Integer serviceType) {
-        this.serviceType = serviceType;
-    }
 
     public String getServiceName() {
         return serviceName;

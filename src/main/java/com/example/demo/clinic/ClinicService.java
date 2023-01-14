@@ -1,6 +1,5 @@
-package com.example.demo.clinic;
+package main.java.com.example.demo.clinic;
 
-import com.example.demo.patient.Patient;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +13,7 @@ public class ClinicService {
         this.clinicRepository = clinicRepository;
     }
     List<Clinic> getClinics(){
-        return List.of();
+        return clinicRepository.findAll();
     }
 
 

@@ -1,4 +1,4 @@
-package com.example.demo.user;
+package main.java.com.example.demo.user;
 
 import jakarta.persistence.*;
 
@@ -19,7 +19,7 @@ public class User {
     )
 
     @Column(name= "id")
-    public Long userId;
+    public long id;
     public String userName;
     public String userPhone;
     public String userEmail;
@@ -29,20 +29,20 @@ public class User {
     public User() {
     }
 
-    public User(Long userId, String userPhone, String userEmail, String userPassword, Integer userType) {
-        this.userId = userId;
+    public User(String userName, String userPhone, String userEmail, String userPassword, Integer userType) {
+        this.userName= userName;
         this.userPhone = userPhone;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
         this.userType = userType;
     }
 
-    public Long getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setId(Long userId) {
+        this.id = userId;
     }
 
 

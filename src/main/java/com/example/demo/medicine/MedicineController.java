@@ -1,9 +1,6 @@
-package com.example.demo.medicine;
+package main.java.com.example.demo.medicine;
 
 
-import com.example.demo.patient.Patient;
-import com.example.demo.patient.PatientService;
-import com.example.demo.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

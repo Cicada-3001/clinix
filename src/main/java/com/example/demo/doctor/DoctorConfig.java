@@ -1,8 +1,6 @@
-package com.example.demo.doctor;
+package main.java.com.example.demo.doctor;
 
 
-import com.example.demo.user.User;
-import com.example.demo.user.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,10 +12,12 @@ public class DoctorConfig{
     @Bean
     CommandLineRunner doctorCommandLineRunner(DoctorRepository doctorRepository){
         return args -> {
-            Doctor braque= new Doctor(1L, "Renoir", "Leger", "Gastrology", 1);
-            Doctor renoir= new Doctor(2L, "Braque", "Auguste", "Cardiology", 1);
+            Doctor jan= new Doctor("Verma", "Jan", "Gastrology", 1,10,"../../../assets/images/user-2.jpg" );
+            Doctor vanessa= new Doctor("Jean", "Vanessa", "Cardiology", 2,5,"../../../assets/images/user-4.jpg");
+            Doctor marcel= new Doctor("Marcel", "Matt", "Cardiology", 3,4,"../../../assets/images/user-3.jpg");
+            
             doctorRepository.saveAll(
-                    List.of(braque, renoir)
+                    List.of(jan,vanessa,marcel)
             );
         };
     }

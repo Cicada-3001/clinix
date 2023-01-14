@@ -1,4 +1,4 @@
-package com.example.demo.medicine;
+package main.java.com.example.demo.medicine;
 
 import jakarta.persistence.*;
 

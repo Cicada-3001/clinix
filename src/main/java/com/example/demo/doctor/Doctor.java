@@ -1,6 +1,5 @@
-package com.example.demo.doctor;
+package main.java.com.example.demo.doctor;
 
-import com.example.demo.user.User;
 import jakarta.persistence.*;
 import jdk.jfr.Enabled;
 
@@ -19,25 +18,32 @@ public class Doctor{
     )
 
     private long id;
+    private long userId;
     private String firstname;
     private String lastname;
     private String speciality;
     private long clinicId;
+    private Integer experience; 
+    private String contact; 
+    private String imgUrl; 
+    
 
 
     public Doctor(){
         super();
     }
 
-    public Doctor(long id, String firstname, String lastname, String speciality, long clinicId) {
-        this.id = id;
+    public Doctor(String firstname, String lastname, String speciality, long clinicId, 
+    	 Integer experience,String imgUrl) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.speciality = speciality;
         this.clinicId = clinicId;
+        this.experience = experience; 
+        this.imgUrl= imgUrl; 
     }
 
-
+    
     public long getId() {
         return id;
     }
@@ -45,6 +51,25 @@ public class Doctor{
     public void setId(long id) {
         this.id = id;
     }
+    
+
+    public Integer getExperince() {
+        return experience;
+    }
+
+    public void setExperience(Integer experience) {
+        this.experience = experience;
+    } 
+    
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    } 
+    
+    
 
     public String getFirstname() {
         return firstname;

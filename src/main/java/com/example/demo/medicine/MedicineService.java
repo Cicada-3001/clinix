@@ -1,11 +1,9 @@
-package com.example.demo.medicine;
-
-import com.example.demo.patient.Patient;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+package main.java.com.example.demo.medicine;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class MedicineService {

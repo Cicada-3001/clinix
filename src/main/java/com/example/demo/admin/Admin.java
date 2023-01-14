@@ -1,6 +1,5 @@
-package com.example.demo.admin;
+package main.java.com.example.demo.admin;
 
-import com.example.demo.user.User;
 import jakarta.persistence.*;
 
 
@@ -27,8 +26,7 @@ public class Admin {
     public Admin() {
     }
 
-    public Admin(long id, String username, String email, String password) {
-        this.id = id;
+    public Admin(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;

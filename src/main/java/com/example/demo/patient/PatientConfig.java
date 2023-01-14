@@ -1,8 +1,8 @@
-package com.example.demo.patient;
+package main.java.com.example.demo.patient;
 
 
-import com.example.demo.user.User;
-import com.example.demo.user.UserRepository;
+
+import main.java.com.example.demo.user.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

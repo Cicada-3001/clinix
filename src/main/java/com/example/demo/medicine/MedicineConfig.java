@@ -1,4 +1,4 @@
-package com.example.demo.medicine;
+package main.java.com.example.demo.medicine;
 
 import org.springframework.context.annotation.Configuration;
 

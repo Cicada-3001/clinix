@@ -1,6 +1,6 @@
-package com.example.demo.patient;
+package main.java.com.example.demo.patient;
 
-import com.example.demo.user.User;
+import main.java.com.example.demo.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

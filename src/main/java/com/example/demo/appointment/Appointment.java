@@ -1,4 +1,4 @@
-package com.example.demo.appointment;
+package main.java.com.example.demo.appointment;
 
 import jakarta.persistence.*;
 
@@ -20,64 +20,133 @@ public class Appointment {
             generator = "appointment_sequence"
     )
 
+    @Column(name= "id")
     private long id;
-    private String appointmentName;
-    private Date appointmentDate;
-    private Time appointmentTime;
-    private Integer appointmentNumber;
+    
+    private String date;
+    private Integer number;
+    private String doctorName; 
+    private String patientName; 
+    private String clinicName; 
     private Integer doctorId;
     private Integer patientId;
-
     private Integer clinicId;
-    public Appointment(){
-
+    
+  
+    public Appointment() {
+    	
     }
-    public Appointment(long id, String appointmentName, Date appointmentDate, Time appointmentTime, Integer appointmentNumber) {
-        this.id = id;
-        this.appointmentName = appointmentName;
-        this.appointmentDate = appointmentDate;
-        this.appointmentTime = appointmentTime;
-        this.appointmentNumber = appointmentNumber;
+    
+    public Appointment(String date, Integer number, String  doctorName, String patientName, 
+    	String clinicName, Integer patientId, Integer doctorId, Integer clinicId) {
+        this.date = date;
+        this.number = number;
+        this.doctorName = doctorName; 
+        this.patientName =  patientName; 
+        this.clinicName = clinicName; 
+        this.patientId= patientId; 
+        this.doctorId= doctorId; 
+        this.clinicId= clinicId;
+        
     }
 
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
 
-    public String getAppointmentName() {
-        return appointmentName;
+    
+    public Integer getPatientId() {
+        return patientId;
     }
 
-    public void setAppointmentName(String appointmentName) {
-        this.appointmentName = appointmentName;
+    public void setPatientId(Integer patientId) {
+        this.patientId = patientId ;
+    }
+    
+    
+    public String getDoctorName() {
+        return doctorName;
     }
 
-    public Date getAppointmentDate() {
-        return appointmentDate;
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
     }
 
-    public void setAppointmentDate(Date appointmentDate) {
-        this.appointmentDate = appointmentDate;
+    
+    public String getPatientName() {
+        return  patientName;
     }
 
-    public Time getAppointmentTime() {
-        return appointmentTime;
+    public void setPatientName(String patientName) {
+        this.patientName  =  patientName;
+    }
+    
+    
+    public String getClinicName() {
+        return clinicName;
     }
 
-    public void setAppointmentTime(Time appointmentTime) {
-        this.appointmentTime = appointmentTime;
+    public void setClinicName(String clinicName) {
+        this.clinicName = clinicName;
     }
 
-    public Integer getAppointmentNumber() {
-        return appointmentNumber;
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public  Integer getClinicId() {
+        return clinicId;
     }
 
-    public void setAppointmentNumber(Integer appointmentNumber) {
-        this.appointmentNumber = appointmentNumber;
+    
+    public void setClinicId(Integer clinicId) {
+        this.clinicId = clinicId;
+    }
+    
+    
+    public Integer getDoctorId() {
+        return  doctorId;
+    }
+
+    public void setDoctorId(Integer doctorId) {
+        this.doctorId = doctorId;
+    }
+    
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 }
 

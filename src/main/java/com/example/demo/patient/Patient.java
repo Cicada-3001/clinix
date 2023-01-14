@@ -1,6 +1,5 @@
-package com.example.demo.patient;
+package main.java.com.example.demo.patient;
 
-import com.example.demo.user.User;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -21,6 +20,8 @@ public class Patient{
             strategy = GenerationType.SEQUENCE,
             generator = "patient_sequence"
     )
+    
+    @Column(name= "id")
     private long id;
     private String firstname;
     private String lastname;

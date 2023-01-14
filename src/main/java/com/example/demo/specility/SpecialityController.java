@@ -1,9 +1,11 @@
-package com.example.demo.specility;
+package main.java.com.example.demo.specility;
 
 
-import com.example.demo.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import main.java.com.example.demo.specility.Speciality;
+import main.java.com.example.demo.specility.SpecialityService;
 
 import java.util.List;
 

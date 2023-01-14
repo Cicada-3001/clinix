@@ -1,15 +1,14 @@
-package com.example.demo.Service;
+package main.java.com.example.demo.Service;
 
 
-import com.example.demo.patient.Patient;
-import com.example.demo.patient.PatientService;
-import com.example.demo.user.User;
+import main.java.com.example.demo.patient.Patient;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static com.example.demo.Shared.BASEURL;
+import static main.java.com.example.demo.Shared.BASEURL;
 
 @CrossOrigin(origins = BASEURL)
 @RestController

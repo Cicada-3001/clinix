@@ -1,13 +1,14 @@
-package com.example.demo.clinic;
+package main.java.com.example.demo.clinic;
 
-import com.example.demo.medicine.Medicine;
-import com.example.demo.user.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import static main.java.com.example.demo.Shared.BASEURL;
+
 import java.util.List;
 
-
+@CrossOrigin(origins = BASEURL)
 @RestController
 @RequestMapping(path= "/clinics")
 public class ClinicController {

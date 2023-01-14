@@ -1,4 +1,4 @@
-package com.example.demo.specility;
+package main.java.com.example.demo.specility;
 
 
 import jakarta.persistence.*;

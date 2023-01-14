@@ -1,9 +1,10 @@
-package com.example.demo.Service;
+package main.java.com.example.demo.Service;
 
 import java.util.List;
 
 
-import com.example.demo.user.User;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 @Service
@@ -13,12 +14,12 @@ public class ServiceService {
     public ServiceService(ServiceRepository serviceRepository) {
         this.serviceRepository = serviceRepository;
     }
-    List<com.example.demo.Service.Service> getServices(){
+    List<main.java.com.example.demo.Service.Service> getServices(){
         return  serviceRepository.findAll();
     }
 
 
-    public void  addNewService(com.example.demo.Service.Service service){
+    public void  addNewService(main.java.com.example.demo.Service.Service service){
         System.out.println(service);
     }
 
